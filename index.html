@@ -2,7 +2,7 @@
 <html lang="zh-tw">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>登入你的 Canva 帳號</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -46,6 +46,13 @@
                 <img src="static/fb.png" alt="fb" width="25">
                 <span>以 facebook 繼續</span>
             </button>
+            <button class="box-button" >
+                <img src="static/mail.png" alt="mail" width="25">
+                <span>以電子郵件帳號繼續</span>
+            </button>
+            <button class="box-button-else" >
+                <span>透過其他方式繼續操作</span>
+            </button>
             <div class="alert">
                 <p>若繼續操作，即表示你同意 Canva </p>
                 <a href="https://about.canva.com/terms-of-use/">使用條款</a>
@@ -61,13 +68,22 @@
         <script>
             function openPopup() {
                 document.getElementById('popup').style.display = 'block';
-                document.querySelector('.down').style.display = 'block';
+                document.querySelector('down').style.display = 'block';
             }
             function closePopup() {
                 document.getElementById('popup').style.display = 'none';
-                document.querySelector('.down').style.display = 'none';
+                document.querySelector('down').style.display = 'none';
             }
         </script>
     </div>
+    <footer>
+        <a href="https://www.canva.com/policies/privacy-policy/">
+            <h4>隱私權政策</h4>
+        </a>
+        <h4>|</h4>
+        <a href="https://www.canva.com/policies/terms-of-use/">
+            <h4>條款</h4>
+        </a>
+    </footer>
 </body>
 </html>
