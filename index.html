@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <header class="headbar">
+        <a href="https://www.canva.com/zh_tw/login/" >
+            <img src="static/canva-logo.svg" alt="canva" width="80">
+        </a>
+        <div class="header-group-button">
+            <button class="header-button" type="button">
+                <span>設計焦點</span>
+                <img src="static/arrow.png" alt="arrow" width="10" height="6">
+            </button>
+            <button class="header-button" type="button">
+                <span>商業</span>
+                <img src="static/arrow.png" alt="arrow" width="10" height="6">
+            </button>
+            <button class="header-button" type="button">
+                <span>教育</span>
+                <img src="static/arrow.png" alt="arrow" width="10" height="6">
+            </button>
+            <button class="header-button" type="button">
+                <span>定價和方案</span>
+                <img src="static/arrow.png" alt="arrow" width="10" height="6">
+            </button>
+            <button class="header-button" type="button">
+                <span>學習</span>
+                <img src="static/arrow.png" alt="arrow" width="10" height="6">
+            </button>
+        </div>
+    </header>
+    <div class="box-set">
+        <div class="box">
+            <h3>迅速登入或註冊</h3>
+            <p>使用你的電子郵件或其他服務，以繼續使用 Canva (完全免費)！</p>
+            <button class="box-button" onclick="openPopup()">
+                <img src="static/google.png" alt="google" width="25">
+                <span>以 Google 繼續</span>
+            </button>
+            <button class="box-button" >
+                <img src="static/fb.png" alt="fb" width="25">
+                <span>以 facebook 繼續</span>
+            </button>
+            <div class="alert">
+                <p>若繼續操作，即表示你同意 Canva </p>
+                <a href="https://about.canva.com/terms-of-use/">使用條款</a>
+                <p>請參閱我們的</p>
+                <a href="https://about.canva.com/privacy-policy/">隱私權政策</a>
+            </div>
+        </div>
+        <div class="dowm" onclick="closePopup()"></div>
+        <div class="popup" id="popup">
+            <h2>選擇帳戶</h2>
+            <button onclick="closePopup()">取消</button>
+        </div>
+        <script>
+            function openPopup() {
+                document.getElementById('popup').style.display = 'block';
+                document.querySelector('.down').style.display = 'block';
+            }
+            function closePopup() {
+                document.getElementById('popup').style.display = 'none';
+                document.querySelector('.down').style.display = 'none';
+            }
+        </script>
+    </div>
+</body>
+</html>
